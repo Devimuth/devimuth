@@ -1,80 +1,61 @@
-🛠️ Devimuth Tools (Static GIS & Dev Suite)
-A comprehensive, client-side collection of Geographic Information System (GIS) and Software Development utilities. Built as a high-performance static site, all processing happens in your browser—no data is sent to a server.
+# 🛠️ Devimuth Tools
 
+A comprehensive collection of Geographic Information System (GIS) and Software Development utilities. All tools run directly in your browser—**no data is sent to a server**, ensuring complete privacy and security.
 
-🚀 Tech Stack
-Framework: React 18 + Vite
+## ✨ Key Features
 
-Styling: Tailwind CSS
+- 🔒 **100% Private**: All processing happens in your browser—your data never leaves your device
+- 🚀 **Fast & Reliable**: Instant results with no server delays
+- 🌓 **Dark Mode**: Modern interface with dark/light theme support
+- 📱 **Works Everywhere**: Responsive design that works on desktop, tablet, and mobile
+- 🆓 **Completely Free**: No account, no registration, no data collection
 
-Maps: Leaflet & React-Leaflet
+## 🧰 Available Tools
 
-Spatial Logic: Proj4js (Projections) & Turf.js (Analysis)
+### 🌍 GIS & Geospatial Tools
 
-Data Handling: PapaParse (CSV) & Lucide-React (Icons)
+1. **Coordinate Converter** - Convert between WGS84 (Lat/Lon) and UTM zones or local grids
+2. **GeoJSON Visualizer** - Paste and validate GeoJSON to render it instantly on a map
+3. **BBOX Selector** - Draw on a map to capture Bounding Box coordinates (MinX, MinY, MaxX, MaxY)
+4. **Distance & Area Calculator** - Calculate geodesic measurements using Turf.js
+5. **WKT ↔ GeoJSON Converter** - Seamlessly convert between Well-Known Text and GeoJSON formats
+6. **DMS to Decimal Degrees** - Convert Degrees, Minutes, Seconds to web-friendly coordinates
 
-🧰 Featured Tools
-🌍 GIS & Geospatial Tools
-Coordinate Converter: Convert between WGS84 (Lat/Lon) and UTM zones or local grids.
+### 💻 Developer & Data Utilities
 
-GeoJSON Visualizer: Paste and validate GeoJSON to render it instantly on a map.
+1. **JSON ↔ CSV Converter** - Quickly swap between data formats for spreadsheets or APIs
+2. **UUID & Hash Generator** - Generate secure v4 UUIDs and SHA/MD5 hashes
+3. **JWT Decoder** - Inspect JSON Web Tokens (JWT) locally and securely
+4. **JSON Formatter/Minifier** - Prettify messy JSON strings for better readability
+5. **Base64 & URL Encoder** - Standard encoding utilities for web development
+6. **Diff Viewer** - Compare two blocks of text or code to identify changes
 
-BBOX Selector: Draw on a map to capture Bounding Box coordinates (MinX, MinY, MaxX, MaxY).
+### 👥 VA Tools
 
-WKT <-> GeoJSON: Seamlessly convert between Well-Known Text and GeoJSON formats.
+VA Tools section is currently under development.
 
-DMS to Decimal Degrees: Convert Degrees, Minutes, Seconds to web-friendly coordinates.
+## 🔒 Privacy & Security
 
-Distance & Area: Calculate geodesic measurements using Turf.js.
+- All tools run entirely in your browser
+- No data is sent to external servers
+- No tracking or analytics
+- No account or registration required
+- All processing happens locally using JavaScript
 
-💻 Developer & Data Utilities
-JSON <-> CSV Converter: Quickly swap between data formats for spreadsheets or APIs.
+## 💡 How to Use
 
-UUID & Hash Generator: Generate secure v4 UUIDs and SHA/MD5 hashes.
+Simply visit the tool you need and start using it immediately. No installation, no setup required—just open your browser and go!
 
-JWT Decoder: Inspect JSON Web Tokens (JWT) locally and securely.
+1. Choose a tool from the categories above
+2. Enter your data or use the interactive features
+3. Get instant results without any data leaving your browser
 
-JSON Formatter/Minifier: Prettify messy JSON strings for better readability.
+## 👤 About
 
-Base64 & URL Encoder: Standard encoding utilities for web development.
+**Devimuth Tools** - Free, privacy-focused utilities for GIS and software development.
 
-Diff Viewer: Compare two blocks of text or code to identify changes.
+Created by [@Devimuth](https://github.com/Devimuth)
 
-⚙️ Local Development
-Clone & Install
+---
 
-Bash
-
-git clone "github url"
-cd ----
-npm install
-Start Dev Server
-
-Bash
-
-npm run dev
-📦 Deployment
-This project is optimized for GitHub Pages.
-
-Update base in vite.config.js to your repository name.
-
-Deploy with one command:
-
-Bash
-
-npm run deploy
-📝 Project Roadmap
-[x] Initial Project Setup
-
-[ ] Phase 1: Core GIS Tools (Converter, GeoJSON Viewer)
-
-[ ] Phase 2: Advanced Data Tools (CSV/JSON, JWT Decoder)
-
-[ ] Phase 3: Interactive Map Utilities (BBOX, Distance)
-
-[ ] Phase 4: UI/UX Polish & Dark Mode Support
-
-👤 Author
-Devimuth Software & GIS Developer | VA
-
-GitHub: @yourusername
+⭐ If you find this project useful, please consider giving it a star!
