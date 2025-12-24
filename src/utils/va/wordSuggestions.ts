@@ -76,8 +76,6 @@ const wordReplacements: Record<string, { professional: string; reason: string }>
 // Context-aware word suggestions
 export function getWordSuggestions(text: string): WordSuggestion[] {
   const suggestions: WordSuggestion[] = []
-  const words = text.toLowerCase().split(/\b/)
-  const lowerText = text.toLowerCase()
 
   // Check for casual/informal words
   Object.entries(wordReplacements).forEach(([casual, replacement]) => {

@@ -4,7 +4,7 @@ import { Copy, Download, BarChart3, TrendingUp, Lightbulb } from 'lucide-react'
 import { copyToClipboard } from '../../utils/copyToClipboard'
 import toast from 'react-hot-toast'
 import { analyzeKeywordDensity, analyzeNGrams, type AnalysisResult } from '../../utils/marketing/keywordAnalysis'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 export default function KeywordDensityAnalyzer() {
   const [text, setText] = useState('')
@@ -123,7 +123,7 @@ export default function KeywordDensityAnalyzer() {
       <div className="space-y-6">
         {/* Input Section */}
         <div className="space-y-4">
-          <div>
+          <div className="!m-1">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Content to Analyze *
             </label>
@@ -132,7 +132,7 @@ export default function KeywordDensityAnalyzer() {
               onChange={(e) => setText(e.target.value)}
               placeholder="Paste your content here..."
               rows={10}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
             />
             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
               {text.length} characters, {text.split(/\s+/).filter(w => w).length} words
@@ -152,7 +152,7 @@ export default function KeywordDensityAnalyzer() {
               </label>
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Top Keywords to Show
               </label>
@@ -162,7 +162,7 @@ export default function KeywordDensityAnalyzer() {
                 onChange={(e) => setTopN(parseInt(e.target.value) || 20)}
                 min={5}
                 max={50}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
             </div>
           </div>

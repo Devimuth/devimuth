@@ -214,7 +214,7 @@ export default function URLShortener() {
       <div className="space-y-6">
         {/* Input Section */}
         <div className="space-y-4">
-          <div>
+          <div className="!m-1">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               URL to Shorten *
             </label>
@@ -226,7 +226,7 @@ export default function URLShortener() {
                 setValidationError('')
               }}
               placeholder="https://example.com/very/long/url"
-              className={`w-full px-3 py-2 border rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 ${
+              className={`w-full px-3 py-2 border rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500 ${
                 validationError ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
               }`}
             />
@@ -236,7 +236,7 @@ export default function URLShortener() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Custom Alias (optional)
               </label>
@@ -245,14 +245,14 @@ export default function URLShortener() {
                 value={customAlias}
                 onChange={(e) => setCustomAlias(e.target.value)}
                 placeholder="my-custom-link"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
               <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 Letters, numbers, and hyphens only
               </p>
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Expiration Date (optional)
               </label>
@@ -260,11 +260,11 @@ export default function URLShortener() {
                 type="datetime-local"
                 value={expirationDate}
                 onChange={(e) => setExpirationDate(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Password Protection (optional)
               </label>
@@ -273,7 +273,7 @@ export default function URLShortener() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
             </div>
           </div>
@@ -309,7 +309,7 @@ export default function URLShortener() {
                   type="text"
                   value={shortUrl}
                   readOnly
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="flex-1 px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
                 <button
                   onClick={handleCopy}
@@ -407,7 +407,7 @@ export default function URLShortener() {
                     placeholder="Search..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-8 pr-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="pl-8 pr-3 py-1 text-sm border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
                   />
                 </div>
               </div>

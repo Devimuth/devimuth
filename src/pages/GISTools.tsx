@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ToolCard from '../components/ToolCard/ToolCard'
 import SEOHead from '../components/SEO/SEOHead'
+import { useDarkMode } from '../hooks/useDarkMode'
 
 const gisTools = [
   {
@@ -33,6 +34,7 @@ const gisTools = [
 
 export default function GISTools() {
   const [searchQuery, setSearchQuery] = useState('')
+  const { isDark } = useDarkMode()
   
   const filteredTools = gisTools.filter(tool =>
     tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -42,9 +44,9 @@ export default function GISTools() {
   return (
     <>
       <SEOHead
-        title="GIS Tools - Devimuth"
-        description="Comprehensive collection of Geographic Information System tools for coordinate conversion, visualization, and geospatial analysis."
-        keywords="GIS tools, coordinate converter, GeoJSON, map tools, geospatial"
+        title="GIS Tools - Devimuth Tools"
+        description="Comprehensive collection of Geographic Information System tools for coordinate conversion, visualization, and geospatial analysis. Part of Devimuth Tools - free, client-side utilities."
+        keywords="GIS tools, coordinate converter, GeoJSON, map tools, geospatial, Devimuth Tools"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <Link
@@ -54,15 +56,36 @@ export default function GISTools() {
           <ArrowLeft className="h-3.5 w-3.5" />
           <span>Back to Tools</span>
         </Link>
+
+        {/* Enhanced Branding Header */}
+        <div className="mb-8 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <img 
+              src={isDark ? "/logo-w8-bg.png" : "/logo.png"} 
+              alt="Devimuth Logo" 
+              className="h-12 w-auto"
+            />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+              Devimuth Tools
+            </h1>
+          </div>
+          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-2">
+            GIS & Geospatial Tools
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+            Free, client-side utilities for coordinate conversion, map visualization, and geospatial analysis. All processing happens in your browser.
+          </p>
+        </div>
+
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
             <MapPin className="h-6 w-6 text-gis-600 dark:text-gis-400" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
-              GIS & Geospatial Tools
-            </h1>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
+              Available Tools
+            </h2>
           </div>
           <p className="text-base text-gray-700 dark:text-gray-300 max-w-2xl">
-            Coordinate conversion, map visualization, and geospatial analysis. All processing happens in your browser.
+            Choose from {gisTools.length} powerful GIS tools. Everything runs locally in your browser—no data leaves your device.
           </p>
         </div>
 

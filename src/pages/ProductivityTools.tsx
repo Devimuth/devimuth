@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import SEOHead from '../components/SEO/SEOHead'
 import ToolCard from '../components/ToolCard/ToolCard'
 
-const vaTools = [
+const productivityTools = [
   {
     title: 'Typing Test',
     description: 'Measure your typing speed (WPM) and accuracy with customizable test durations and text samples.',
@@ -25,10 +25,10 @@ const vaTools = [
   },
 ]
 
-export default function VATools() {
+export default function ProductivityTools() {
   const [searchQuery, setSearchQuery] = useState('')
 
-  const filteredTools = vaTools.filter(
+  const filteredTools = productivityTools.filter(
     (tool) =>
       tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       tool.description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -37,9 +37,9 @@ export default function VATools() {
   return (
     <>
       <SEOHead
-        title="VA Tools - Devimuth"
-        description="Virtual Assistant tools and utilities for productivity and automation."
-        keywords="VA tools, virtual assistant, productivity tools, automation"
+        title="Productivity Tools - Devimuth"
+        description="Productivity and automation tools for professionals."
+        keywords="productivity tools, automation"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <Link
@@ -53,11 +53,11 @@ export default function VATools() {
           <div className="flex items-center gap-2 mb-3">
             <Users className="h-6 w-6 text-primary-600 dark:text-primary-400" />
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
-              VA Tools
+              Productivity Tools
             </h1>
           </div>
           <p className="text-base text-gray-700 dark:text-gray-300 max-w-2xl">
-            Productivity and automation tools for virtual assistants.
+            Productivity and automation tools for professionals.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function VATools() {
                 description={tool.description}
                 icon={tool.icon}
                 path={tool.path}
-                category="va"
+                category="productivity"
               />
             ))}
           </div>

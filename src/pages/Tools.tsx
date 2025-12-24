@@ -7,8 +7,8 @@ export default function Tools() {
     <>
       <SEOHead
         title="Tools - Devimuth"
-        description="Browse all tool categories: GIS Tools, Developer Tools, VA Tools, and Marketing Tools. Free, client-side utilities for your workflow."
-        keywords="tools, GIS tools, developer tools, VA tools, marketing tools, utilities"
+        description="Browse all tool categories: GIS Tools, Developer Tools, Productivity Tools, and Marketing Tools. Free, client-side utilities for your workflow."
+        keywords="tools, GIS tools, developer tools, productivity tools, marketing tools, utilities"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="mb-8">
@@ -63,14 +63,14 @@ export default function Tools() {
           </Link>
 
           <Link
-            to="/va-tools"
+            to="/productivity-tools"
             className="group block p-6 bg-white dark:bg-gray-800 border-l-4 border-primary-600 dark:border-primary-500 hover:border-primary-700 dark:hover:border-primary-400 transition-colors shadow-sm hover:shadow-md"
           >
             <div className="flex items-start gap-3 mb-3">
               <Users className="h-6 w-6 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5" />
               <div>
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-1.5">
-                  VA Tools
+                  Productivity Tools
                 </h2>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                   Productivity and automation utilities.

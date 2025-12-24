@@ -1,4 +1,4 @@
-// LocalStorage utilities for VA tools
+// LocalStorage utilities for productivity tools
 
 const STORAGE_KEYS = {
   TYPING_TEST_HISTORY: 'devimuth_va_typing_test_history',

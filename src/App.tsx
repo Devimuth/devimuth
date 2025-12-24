@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import Tools from './pages/Tools'
 import GISTools from './pages/GISTools'
 import DevTools from './pages/DevTools'
-import VATools from './pages/VATools'
+import ProductivityTools from './pages/ProductivityTools'
 import MarketingTools from './pages/MarketingTools'
 import CoordinateConverter from './tools/gis/CoordinateConverter'
 import GeoJSONVisualizer from './tools/gis/GeoJSONVisualizer'
@@ -36,7 +36,7 @@ function App() {
           <Route path="/tools" element={<Tools />} />
           <Route path="/gis-tools" element={<GISTools />} />
           <Route path="/dev-tools" element={<DevTools />} />
-          <Route path="/va-tools" element={<VATools />} />
+          <Route path="/productivity-tools" element={<ProductivityTools />} />
           <Route path="/marketing-tools" element={<MarketingTools />} />
           <Route path="/coordinate-converter" element={<CoordinateConverter />} />
           <Route path="/geojson-visualizer" element={<GeoJSONVisualizer />} />

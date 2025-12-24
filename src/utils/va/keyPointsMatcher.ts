@@ -31,15 +31,6 @@ const synonymMap: Record<string, string[]> = {
   'professional': ['businesslike', 'formal', 'appropriate', 'suitable'],
 }
 
-// Extract base words (stems) from text
-function getBaseWords(text: string): string[] {
-  const words = text.toLowerCase()
-    .replace(/[^\w\s]/g, ' ')
-    .split(/\s+/)
-    .filter(w => w.length > 2)
-  return words
-}
-
 // Check if key point is addressed using enhanced matching
 export function checkKeyPointAddressed(
   keyPoint: string,

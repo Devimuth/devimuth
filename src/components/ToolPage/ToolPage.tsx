@@ -14,7 +14,7 @@ interface ToolPageProps {
 const getCategoryPage = (pathname: string): { path: string; label: string } => {
   const gisTools = ['/coordinate-converter', '/geojson-visualizer', '/bbox-selector', '/distance-area']
   const devTools = ['/json-csv-converter', '/uuid-hash-generator', '/jwt-decoder', '/json-formatter', '/base64-url-encoder', '/diff-viewer']
-  const vaTools = ['/typing-test', '/skills-assessment-generator', '/communication-test']
+  const productivityTools = ['/typing-test', '/skills-assessment-generator', '/communication-test']
   const marketingTools = ['/seo-meta-generator', '/meta-description-generator', '/open-graph-generator', '/schema-markup-generator', '/social-preview-generator', '/keyword-density-analyzer', '/url-shortener']
   
   if (gisTools.includes(pathname)) {
@@ -23,8 +23,8 @@ const getCategoryPage = (pathname: string): { path: string; label: string } => {
   if (devTools.includes(pathname)) {
     return { path: '/dev-tools', label: 'Dev Tools' }
   }
-  if (vaTools.includes(pathname)) {
-    return { path: '/va-tools', label: 'VA Tools' }
+  if (productivityTools.includes(pathname)) {
+    return { path: '/productivity-tools', label: 'Productivity Tools' }
   }
   if (marketingTools.includes(pathname)) {
     return { path: '/marketing-tools', label: 'Marketing Tools' }
@@ -67,8 +67,8 @@ export default function ToolPage({ title, description, children, keywords }: Too
           </p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 sm:p-6 overflow-x-hidden">
-          <div className="w-full max-w-full overflow-x-auto">
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 sm:p-10">
+          <div className="w-full max-w-full overflow-x-auto overflow-y-visible">
             {children}
           </div>
         </div>

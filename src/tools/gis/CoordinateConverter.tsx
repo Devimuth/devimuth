@@ -350,7 +350,7 @@ export default function CoordinateConverter() {
 
           {utmMode === 'latlon-to-utm' ? (
             <>
-              <div>
+              <div className="!m-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Latitude (WGS84)
                 </label>
@@ -360,10 +360,10 @@ export default function CoordinateConverter() {
                   value={inputLat}
                   onChange={(e) => setInputLat(e.target.value)}
                   placeholder="e.g., 52.5200"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                 />
               </div>
-              <div>
+              <div className="!m-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Longitude (WGS84)
                 </label>
@@ -373,7 +373,7 @@ export default function CoordinateConverter() {
                     value={inputLon}
                     onChange={(e) => handleLonChange(e.target.value)}
                     placeholder="e.g., 13.4050"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                   />
                   {detectedZone !== null && (
                     <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">
@@ -388,7 +388,7 @@ export default function CoordinateConverter() {
                   )}
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div>
+                <div className="!m-1">
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     UTM Zone (1-60)
                   </label>
@@ -398,17 +398,17 @@ export default function CoordinateConverter() {
                     max="60"
                     value={utmZone}
                     onChange={(e) => setUtmZone(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                   />
                 </div>
-                <div>
+                <div className="!m-1">
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Hemisphere
                   </label>
                   <select
                     value={utmNorth ? 'north' : 'south'}
                     onChange={(e) => setUtmNorth(e.target.value === 'north')}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                   >
                     <option value="north">North</option>
                     <option value="south">South</option>
@@ -441,7 +441,7 @@ export default function CoordinateConverter() {
           ) : (
             <>
               <div className="grid grid-cols-2 gap-4">
-                <div>
+                <div className="!m-1">
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     UTM Zone (1-60)
                   </label>
@@ -451,24 +451,24 @@ export default function CoordinateConverter() {
                     max="60"
                     value={utmZone}
                     onChange={(e) => setUtmZone(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                   />
                 </div>
-                <div>
+                <div className="!m-1">
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Hemisphere
                   </label>
                   <select
                     value={utmNorth ? 'north' : 'south'}
                     onChange={(e) => setUtmNorth(e.target.value === 'north')}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                   >
                     <option value="north">North</option>
                     <option value="south">South</option>
                   </select>
                 </div>
               </div>
-              <div>
+              <div className="!m-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   UTM Easting
                 </label>
@@ -478,10 +478,10 @@ export default function CoordinateConverter() {
                   value={utmEasting}
                   onChange={(e) => setUtmEasting(e.target.value)}
                   placeholder="e.g., 391234.56"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                 />
               </div>
-              <div>
+              <div className="!m-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   UTM Northing
                 </label>
@@ -491,7 +491,7 @@ export default function CoordinateConverter() {
                   value={utmNorthing}
                   onChange={(e) => setUtmNorthing(e.target.value)}
                   placeholder="e.g., 5823456.78"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
                 />
               </div>
               {(inputLat || inputLon) && (
@@ -544,10 +544,10 @@ export default function CoordinateConverter() {
               <div>
                 <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Latitude (DMS)</h4>
                 <div className="grid grid-cols-4 gap-2">
-                  <input type="number" value={latDegrees} onChange={(e) => setLatDegrees(e.target.value)} placeholder="Deg" className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
-                  <input type="number" step="any" value={latMinutes} onChange={(e) => setLatMinutes(e.target.value)} placeholder="Min" className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
-                  <input type="number" step="any" value={latSeconds} onChange={(e) => setLatSeconds(e.target.value)} placeholder="Sec" className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
-                  <select value={latDirection} onChange={(e) => setLatDirection(e.target.value as 'N' | 'S')} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm">
+                  <input type="number" value={latDegrees} onChange={(e) => setLatDegrees(e.target.value)} placeholder="Deg" className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
+                  <input type="number" step="any" value={latMinutes} onChange={(e) => setLatMinutes(e.target.value)} placeholder="Min" className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
+                  <input type="number" step="any" value={latSeconds} onChange={(e) => setLatSeconds(e.target.value)} placeholder="Sec" className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
+                  <select value={latDirection} onChange={(e) => setLatDirection(e.target.value as 'N' | 'S')} className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm">
                     <option value="N">N</option>
                     <option value="S">S</option>
                   </select>
@@ -556,10 +556,10 @@ export default function CoordinateConverter() {
               <div>
                 <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Longitude (DMS)</h4>
                 <div className="grid grid-cols-4 gap-2">
-                  <input type="number" value={lonDegrees} onChange={(e) => setLonDegrees(e.target.value)} placeholder="Deg" className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
-                  <input type="number" step="any" value={lonMinutes} onChange={(e) => setLonMinutes(e.target.value)} placeholder="Min" className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
-                  <input type="number" step="any" value={lonSeconds} onChange={(e) => setLonSeconds(e.target.value)} placeholder="Sec" className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
-                  <select value={lonDirection} onChange={(e) => setLonDirection(e.target.value as 'E' | 'W')} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm">
+                  <input type="number" value={lonDegrees} onChange={(e) => setLonDegrees(e.target.value)} placeholder="Deg" className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
+                  <input type="number" step="any" value={lonMinutes} onChange={(e) => setLonMinutes(e.target.value)} placeholder="Min" className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
+                  <input type="number" step="any" value={lonSeconds} onChange={(e) => setLonSeconds(e.target.value)} placeholder="Sec" className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm" />
+                  <select value={lonDirection} onChange={(e) => setLonDirection(e.target.value as 'E' | 'W')} className="px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm">
                     <option value="E">E</option>
                     <option value="W">W</option>
                   </select>
@@ -592,11 +592,11 @@ export default function CoordinateConverter() {
             <>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Latitude (Decimal)</label>
-                <input type="number" step="any" value={decimalLat} onChange={(e) => setDecimalLat(e.target.value)} placeholder="e.g., 52.5200" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
+                <input type="number" step="any" value={decimalLat} onChange={(e) => setDecimalLat(e.target.value)} placeholder="e.g., 52.5200" className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Longitude (Decimal)</label>
-                <input type="number" step="any" value={decimalLon} onChange={(e) => setDecimalLon(e.target.value)} placeholder="e.g., 13.4050" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
+                <input type="number" step="any" value={decimalLon} onChange={(e) => setDecimalLon(e.target.value)} placeholder="e.g., 13.4050" className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
               </div>
               {resultDMS && (
                 <div className="space-y-2 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
@@ -635,9 +635,9 @@ export default function CoordinateConverter() {
 
           {wktMode === 'wkt-to-geojson' ? (
             <>
-              <div>
+              <div className="!m-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">WKT Input</label>
-                <textarea value={wktInput} onChange={(e) => setWktInput(e.target.value)} placeholder='POINT(13.4050 52.5200)' className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500" />
+                <textarea value={wktInput} onChange={(e) => setWktInput(e.target.value)} placeholder='POINT(13.4050 52.5200)' className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500" />
               </div>
               {wktError && (
                 <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
@@ -653,15 +653,15 @@ export default function CoordinateConverter() {
                       <span>Copy</span>
                     </button>
                   </div>
-                  <textarea value={geojsonInput} readOnly className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm" />
+                  <textarea value={geojsonInput} readOnly className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm" />
                 </div>
               )}
             </>
           ) : (
             <>
-              <div>
+              <div className="!m-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">GeoJSON Input</label>
-                <textarea value={geojsonInput} onChange={(e) => setGeojsonInput(e.target.value)} placeholder='{"type": "Point", "coordinates": [13.4050, 52.5200]}' className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500" />
+                <textarea value={geojsonInput} onChange={(e) => setGeojsonInput(e.target.value)} placeholder='{"type": "Point", "coordinates": [13.4050, 52.5200]}' className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500" />
               </div>
               {wktError && (
                 <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
@@ -677,7 +677,7 @@ export default function CoordinateConverter() {
                       <span>Copy</span>
                     </button>
                   </div>
-                  <textarea value={wktInput} readOnly className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm" />
+                  <textarea value={wktInput} readOnly className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm" />
                 </div>
               )}
             </>
@@ -733,7 +733,7 @@ export default function CoordinateConverter() {
                   setWktError('')
                   setDetectedZone(null)
                 }}
-                className="appearance-none w-full sm:w-64 px-4 py-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent cursor-pointer"
+                className="appearance-none w-full sm:w-64 px-4 py-2 pr-10 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 focus:border-transparent cursor-pointer"
               >
                 <option value="wgs84-utm">WGS84 ↔ UTM</option>
                 <option value="dms-decimal">DMS ↔ Decimal</option>
@@ -746,7 +746,7 @@ export default function CoordinateConverter() {
 
         {batchMode && (converterType === 'wgs84-utm' || converterType === 'dms-decimal') ? (
           <div className="space-y-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Batch Input (one coordinate per line)
               </label>
@@ -756,7 +756,7 @@ export default function CoordinateConverter() {
                 placeholder={converterType === 'wgs84-utm' && utmMode === 'latlon-to-utm' 
                   ? '52.5200, 13.4050\n51.5074, -0.1278\n...'
                   : '52 31 12 N, 13 24 30 E\n51 30 27 N, 0 7 39 W\n...'}
-                className="w-full h-48 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-48 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
             <button
@@ -767,7 +767,7 @@ export default function CoordinateConverter() {
             </button>
             {batchResults.length > 0 && (
               <div className="overflow-x-auto">
-                <table className="w-full border border-gray-300 dark:border-gray-600 rounded-lg">
+                <table className="w-full border-2 border-gray-300 dark:border-gray-600 rounded-md">
                   <thead className="bg-gray-50 dark:bg-gray-800">
                     <tr>
                       <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 dark:text-gray-300 border-b border-gray-300 dark:border-gray-600">Input</th>

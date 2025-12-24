@@ -6,21 +6,21 @@ interface ToolCardProps {
   description: string
   icon: LucideIcon
   path: string
-  category: 'gis' | 'dev' | 'va' | 'marketing'
+  category: 'gis' | 'dev' | 'productivity' | 'marketing'
 }
 
 export default function ToolCard({ title, description, icon: Icon, path, category }: ToolCardProps) {
   const categoryStyles = {
     gis: 'border-l-4 border-gis-600 dark:border-gis-500 hover:border-gis-700 dark:hover:border-gis-400',
     dev: 'border-l-4 border-dev-600 dark:border-dev-500 hover:border-dev-700 dark:hover:border-dev-400',
-    va: 'border-l-4 border-primary-600 dark:border-primary-500 hover:border-primary-700 dark:hover:border-primary-400',
+    productivity: 'border-l-4 border-primary-600 dark:border-primary-500 hover:border-primary-700 dark:hover:border-primary-400',
     marketing: 'border-l-4 border-purple-600 dark:border-purple-500 hover:border-purple-700 dark:hover:border-purple-400',
   }
 
   const iconColors = {
     gis: 'text-gis-600 dark:text-gis-400',
     dev: 'text-dev-600 dark:text-dev-400',
-    va: 'text-primary-600 dark:text-primary-400',
+    productivity: 'text-primary-600 dark:text-primary-400',
     marketing: 'text-purple-600 dark:text-purple-400',
   }
 

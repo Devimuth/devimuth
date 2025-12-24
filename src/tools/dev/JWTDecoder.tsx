@@ -140,7 +140,7 @@ export default function JWTDecoder() {
       keywords="JWT decoder, JSON web token, token decoder, JWT inspector"
     >
       <div className="space-y-6">
-        <div>
+        <div className="!m-1">
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             JWT Token
           </label>
@@ -148,7 +148,7 @@ export default function JWTDecoder() {
             value={jwtInput}
             onChange={(e) => setJwtInput(e.target.value)}
             placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-            className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+            className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
           />
         </div>
         <button

@@ -93,7 +93,7 @@ export default function DiffViewer() {
 
         {viewMode === 'side-by-side' ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-            <div className="min-w-0">
+            <div className="min-w-0 !m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Original Text
               </label>
@@ -101,10 +101,10 @@ export default function DiffViewer() {
                 value={oldText}
                 onChange={(e) => setOldText(e.target.value)}
                 placeholder="Enter original text..."
-                className="w-full h-64 sm:h-96 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500 resize-none"
+                className="w-full h-64 sm:h-96 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 resize-none"
               />
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0 !m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 New Text
               </label>
@@ -112,13 +112,13 @@ export default function DiffViewer() {
                 value={newText}
                 onChange={(e) => setNewText(e.target.value)}
                 placeholder="Enter new text..."
-                className="w-full h-64 sm:h-96 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500 resize-none"
+                className="w-full h-64 sm:h-96 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 resize-none"
               />
             </div>
           </div>
         ) : (
           <div className="space-y-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Original Text
               </label>
@@ -126,10 +126,10 @@ export default function DiffViewer() {
                 value={oldText}
                 onChange={(e) => setOldText(e.target.value)}
                 placeholder="Enter original text..."
-                className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500 resize-none"
+                className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 resize-none"
               />
             </div>
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 New Text
               </label>
@@ -137,7 +137,7 @@ export default function DiffViewer() {
                 value={newText}
                 onChange={(e) => setNewText(e.target.value)}
                 placeholder="Enter new text..."
-                className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500 resize-none"
+                className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 resize-none"
               />
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function DiffViewer() {
               </div>
             </div>
             {viewMode === 'unified' ? (
-              <div className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden w-full">
+              <div className="border-2 border-gray-300 dark:border-gray-600 rounded-md overflow-hidden w-full">
                 <div className="max-h-64 sm:max-h-96 overflow-y-auto overflow-x-auto">
                   <pre className="font-mono text-sm p-4">
                     {formatUnifiedDiff(oldText, newText)}
@@ -190,7 +190,7 @@ export default function DiffViewer() {
                 </div>
               </div>
             ) : (
-              <div className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden w-full">
+              <div className="border-2 border-gray-300 dark:border-gray-600 rounded-md overflow-hidden w-full">
                 <div className="max-h-64 sm:max-h-96 overflow-y-auto overflow-x-auto">
                   {diff.map((line, index) => (
                     <div

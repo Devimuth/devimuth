@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Github, Heart, MapPin, Code, Users, TrendingUp, HelpCircle, Bug, Lightbulb } from 'lucide-react'
+import { Github, MapPin, Code, Users, TrendingUp, HelpCircle, Bug, Lightbulb } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -76,11 +76,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  to="/va-tools" 
+                  to="/productivity-tools" 
                   className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
                   <Users className="h-4 w-4" />
-                  <span>VA Tools</span>
+                  <span>Productivity Tools</span>
                 </Link>
               </li>
               <li>

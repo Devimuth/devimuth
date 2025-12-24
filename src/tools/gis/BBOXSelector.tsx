@@ -384,7 +384,7 @@ export default function BBOXSelector() {
                 <select
                   value={coordinateSystem}
                   onChange={(e) => handleCoordinateSystemChange(e.target.value as 'WGS84' | 'WebMercator')}
-                  className="px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="px-2 py-1 text-sm border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 >
                   <option value="WGS84">WGS84</option>
                   <option value="WebMercator">Web Mercator</option>
@@ -404,7 +404,7 @@ export default function BBOXSelector() {
                           step="any"
                           value={manualInput.minX}
                           onChange={(e) => handleManualInputChange('minX', e.target.value)}
-                          className="flex-1 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
+                          className="flex-1 px-2 py-1 text-sm border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
                         />
                         <button
                           onClick={() => copyToClipboard(manualInput.minX, 'MinX copied!')}
@@ -423,7 +423,7 @@ export default function BBOXSelector() {
                           step="any"
                           value={manualInput.minY}
                           onChange={(e) => handleManualInputChange('minY', e.target.value)}
-                          className="flex-1 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
+                          className="flex-1 px-2 py-1 text-sm border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
                         />
                         <button
                           onClick={() => copyToClipboard(manualInput.minY, 'MinY copied!')}
@@ -442,7 +442,7 @@ export default function BBOXSelector() {
                           step="any"
                           value={manualInput.maxX}
                           onChange={(e) => handleManualInputChange('maxX', e.target.value)}
-                          className="flex-1 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
+                          className="flex-1 px-2 py-1 text-sm border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
                         />
                         <button
                           onClick={() => copyToClipboard(manualInput.maxX, 'MaxX copied!')}
@@ -461,7 +461,7 @@ export default function BBOXSelector() {
                           step="any"
                           value={manualInput.maxY}
                           onChange={(e) => handleManualInputChange('maxY', e.target.value)}
-                          className="flex-1 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
+                          className="flex-1 px-2 py-1 text-sm border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono"
                         />
                         <button
                           onClick={() => copyToClipboard(manualInput.maxY, 'MaxY copied!')}
@@ -507,7 +507,7 @@ export default function BBOXSelector() {
                       <select
                         value={areaUnit}
                         onChange={(e) => setAreaUnit(e.target.value as AreaUnit)}
-                        className="px-2 py-1 text-xs border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                        className="px-2 py-1 text-xs border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       >
                         <option value="m2">m²</option>
                         <option value="km2">km²</option>

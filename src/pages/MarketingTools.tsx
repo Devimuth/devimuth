@@ -1,4 +1,4 @@
-import { Search, TrendingUp, FileText, Hash, Link as LinkIcon, Share2, BarChart3, Scissors, ArrowLeft } from 'lucide-react'
+import { Search, TrendingUp, FileText, Hash, Share2, BarChart3, Scissors, ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ToolCard from '../components/ToolCard/ToolCard'

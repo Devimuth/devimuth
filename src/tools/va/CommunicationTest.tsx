@@ -338,7 +338,7 @@ export default function CommunicationTest() {
             value={selectedScenario?.id || ''}
             onChange={(e) => handleScenarioChange(e.target.value)}
             disabled={submitted && !practiceMode}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
           >
             <option value="">Choose a scenario...</option>
             {scenarios.map((scenario) => (
@@ -494,7 +494,7 @@ export default function CommunicationTest() {
                               setUserResponse('Subject: ' + subject.replace(/^Re:\s*/, '') + '\n\n' + userResponse)
                             }
                           }}
-                          className="px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+                          className="px-2 py-1 text-xs bg-white dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
                         >
                           {subject}
                         </button>
@@ -513,7 +513,7 @@ export default function CommunicationTest() {
                               setUserResponse(greeting + '\n\n' + userResponse)
                             }
                           }}
-                          className="px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+                          className="px-2 py-1 text-xs bg-white dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
                         >
                           {greeting}
                         </button>
@@ -532,7 +532,7 @@ export default function CommunicationTest() {
                               setUserResponse(userResponse + '\n\n' + closing + '\n[Your Name]')
                             }
                           }}
-                          className="px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+                          className="px-2 py-1 text-xs bg-white dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
                         >
                           {closing}
                         </button>
@@ -543,13 +543,15 @@ export default function CommunicationTest() {
               </div>
             )}
             
-            <textarea
-              value={userResponse}
-              onChange={(e) => setUserResponse(e.target.value)}
-              disabled={submitted}
-              placeholder="Write your response here... Remember to address all key points and match the expected tone."
-              className="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:opacity-50 transition-all resize-none"
-            />
+            <div className="!m-1">
+              <textarea
+                value={userResponse}
+                onChange={(e) => setUserResponse(e.target.value)}
+                disabled={submitted}
+                placeholder="Write your response here... Remember to address all key points and match the expected tone."
+                className="w-full h-64 px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 focus:border-primary-500 disabled:opacity-50 transition-all resize-none"
+              />
+            </div>
             
             {/* Real-time Feedback Indicators */}
             {!submitted && userResponse.trim().length > 0 && (

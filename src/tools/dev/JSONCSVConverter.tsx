@@ -109,7 +109,7 @@ export default function JSONCSVConverter() {
         <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Format Conversion</h2>
           <div className="flex items-center space-x-2">
-            <label className="flex items-center space-x-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-600">
+            <label className="flex items-center space-x-2 px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-600">
               <Upload className="h-4 w-4" />
               <span className="text-sm">
                 Upload {conversionMode === 'json-to-csv' ? 'JSON' : 'CSV'}
@@ -186,7 +186,7 @@ export default function JSONCSVConverter() {
 
         {conversionMode === 'json-to-csv' ? (
           <div className="space-y-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 JSON Input
               </label>
@@ -194,7 +194,7 @@ export default function JSONCSVConverter() {
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 placeholder='[{"name": "John", "age": 30}, {"name": "Jane", "age": 25}]'
-                className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
             <button
@@ -213,7 +213,7 @@ export default function JSONCSVConverter() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Preview (first {previewData.length} rows)
                 </label>
-                <div className="overflow-x-auto border border-gray-300 dark:border-gray-600 rounded-lg">
+                <div className="overflow-x-auto border-2 border-gray-300 dark:border-gray-600 rounded-md">
                   <table className="w-full text-sm">
                     <thead className="bg-gray-100 dark:bg-gray-800">
                       <tr>
@@ -265,14 +265,14 @@ export default function JSONCSVConverter() {
                 <textarea
                   value={output}
                   readOnly
-                  className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
+                  className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
                 />
               </div>
             )}
           </div>
         ) : (
           <div className="space-y-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 CSV Input
               </label>
@@ -280,7 +280,7 @@ export default function JSONCSVConverter() {
                 value={csvInput}
                 onChange={(e) => setCsvInput(e.target.value)}
                 placeholder='name,age\nJohn,30\nJane,25'
-                className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
             <button
@@ -299,7 +299,7 @@ export default function JSONCSVConverter() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Preview (first {previewData.length} rows)
                 </label>
-                <div className="overflow-x-auto border border-gray-300 dark:border-gray-600 rounded-lg">
+                <div className="overflow-x-auto border-2 border-gray-300 dark:border-gray-600 rounded-md">
                   <table className="w-full text-sm">
                     <thead className="bg-gray-100 dark:bg-gray-800">
                       <tr>
@@ -351,7 +351,7 @@ export default function JSONCSVConverter() {
                 <textarea
                   value={output}
                   readOnly
-                  className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
+                  className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
                 />
               </div>
             )}

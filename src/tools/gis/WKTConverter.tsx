@@ -147,7 +147,7 @@ export default function WKTConverter() {
 
         {conversionMode === 'wkt-to-geojson' ? (
           <div className="space-y-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 WKT Input
               </label>
@@ -155,7 +155,7 @@ export default function WKTConverter() {
                 value={wktInput}
                 onChange={(e) => setWktInput(e.target.value)}
                 placeholder='POINT(13.4050 52.5200)'
-                className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
             <button
@@ -186,14 +186,14 @@ export default function WKTConverter() {
                 <textarea
                   value={geojsonInput}
                   readOnly
-                  className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
+                  className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
                 />
               </div>
             )}
           </div>
         ) : (
           <div className="space-y-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 GeoJSON Input
               </label>
@@ -201,7 +201,7 @@ export default function WKTConverter() {
                 value={geojsonInput}
                 onChange={(e) => setGeojsonInput(e.target.value)}
                 placeholder='{"type": "Point", "coordinates": [13.4050, 52.5200]}'
-                className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
             <button
@@ -232,7 +232,7 @@ export default function WKTConverter() {
                 <textarea
                   value={wktInput}
                   readOnly
-                  className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
+                  className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
                 />
               </div>
             )}

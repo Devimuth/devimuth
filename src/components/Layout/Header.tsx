@@ -14,7 +14,7 @@ export default function Header() {
     }
     if (path === '/tools') {
       // Highlight Tools when on /tools or any tool category page
-      const toolPaths = ['/tools', '/gis-tools', '/dev-tools', '/va-tools', '/marketing-tools']
+      const toolPaths = ['/tools', '/gis-tools', '/dev-tools', '/productivity-tools', '/marketing-tools']
       return toolPaths.some(toolPath => location.pathname.startsWith(toolPath))
     }
     return location.pathname.startsWith(path)

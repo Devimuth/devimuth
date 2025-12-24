@@ -76,14 +76,14 @@ export default function SchemaMarkupGenerator() {
     >
       <div className="space-y-6">
         {/* Schema Type Selector */}
-        <div>
+        <div className="!m-1">
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Schema Type
           </label>
           <select
             value={schemaType}
             onChange={(e) => setSchemaType(e.target.value as SchemaType)}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
           >
             <option value="Article">Article</option>
             <option value="Organization">Organization</option>
@@ -107,7 +107,7 @@ export default function SchemaMarkupGenerator() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {currentFields.map((field) => (
-              <div key={field.key}>
+              <div key={field.key} className="!m-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {field.label} {field.required && <span className="text-red-500">*</span>}
                 </label>
@@ -117,7 +117,7 @@ export default function SchemaMarkupGenerator() {
                     onChange={(e) => handleFieldChange(field.key, e.target.value)}
                     placeholder={field.placeholder || field.label}
                     rows={field.key.includes('questions') || field.key.includes('answers') || field.key.includes('items') ? 5 : 3}
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
                   />
                 ) : (
                   <input
@@ -125,7 +125,7 @@ export default function SchemaMarkupGenerator() {
                     value={formData[field.key] || ''}
                     onChange={(e) => handleFieldChange(field.key, e.target.value)}
                     placeholder={field.placeholder || field.label}
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
                   />
                 )}
                 {field.help && (

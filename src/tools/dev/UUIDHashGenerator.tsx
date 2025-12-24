@@ -173,7 +173,7 @@ export default function UUIDHashGenerator() {
               <select
                 value={uuidVersion}
                 onChange={(e) => setUuidVersion(e.target.value as 'v1' | 'v4' | 'v5')}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="v1">v1 (Timestamp-based)</option>
                 <option value="v4">v4 (Random)</option>
@@ -191,7 +191,7 @@ export default function UUIDHashGenerator() {
                     value={uuidNamespace}
                     onChange={(e) => setUuidNamespace(e.target.value)}
                     placeholder="6ba7b810-9dad-11d1-80b4-00c04fd430c8 or any string"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm"
                   />
                 </div>
                 <div>
@@ -203,7 +203,7 @@ export default function UUIDHashGenerator() {
                     value={uuidName}
                     onChange={(e) => setUuidName(e.target.value)}
                     placeholder="Enter name for UUID v5"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
               </div>
@@ -218,7 +218,7 @@ export default function UUIDHashGenerator() {
                 max="100"
                 value={uuidCount}
                 onChange={(e) => setUuidCount(parseInt(e.target.value) || 1)}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
             <button
@@ -249,7 +249,7 @@ export default function UUIDHashGenerator() {
                         type="text"
                         value={uuid}
                         readOnly
-                        className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
+                        className="flex-1 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
                       />
                       <button
                         onClick={() => copyToClipboard(uuid, 'UUID copied!')}
@@ -289,7 +289,7 @@ export default function UUIDHashGenerator() {
               <select
                 value={hashAlgorithm}
                 onChange={(e) => setHashAlgorithm(e.target.value as 'SHA-256' | 'SHA-512' | 'MD5')}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="SHA-256">SHA-256</option>
                 <option value="SHA-512">SHA-512</option>
@@ -300,7 +300,7 @@ export default function UUIDHashGenerator() {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Upload File (or enter text below)
               </label>
-              <label className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-600">
+              <label className="flex items-center space-x-2 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-600">
                 <Upload className="h-4 w-4" />
                 <span className="text-sm">
                   {hashFileInput ? hashFileInput.name : 'Choose File'}
@@ -337,7 +337,7 @@ export default function UUIDHashGenerator() {
                 onChange={(e) => setHashInput(e.target.value)}
                 placeholder="Enter text to hash..."
                 disabled={!!hashFileInput}
-                className="w-full h-32 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full h-32 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
             <button
@@ -373,7 +373,7 @@ export default function UUIDHashGenerator() {
 
         {activeTab === 'compare' && (
           <div className="space-y-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Hash 1
               </label>
@@ -381,10 +381,10 @@ export default function UUIDHashGenerator() {
                 value={compareHash1}
                 onChange={(e) => setCompareHash1(e.target.value)}
                 placeholder="Enter first hash..."
-                className="w-full h-24 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-24 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Hash 2
               </label>
@@ -392,7 +392,7 @@ export default function UUIDHashGenerator() {
                 value={compareHash2}
                 onChange={(e) => setCompareHash2(e.target.value)}
                 placeholder="Enter second hash..."
-                className="w-full h-24 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-24 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
             <button

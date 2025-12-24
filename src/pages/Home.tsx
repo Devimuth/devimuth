@@ -9,11 +9,11 @@ import { useDarkMode } from '../hooks/useDarkMode'
 const TOOL_COUNTS = {
   gis: 4,
   dev: 6,
-  va: 0,
+  productivity: 3,
   marketing: 7,
 }
 
-const TOTAL_TOOLS = TOOL_COUNTS.gis + TOOL_COUNTS.dev + TOOL_COUNTS.va + TOOL_COUNTS.marketing
+const TOTAL_TOOLS = TOOL_COUNTS.gis + TOOL_COUNTS.dev + TOOL_COUNTS.productivity + TOOL_COUNTS.marketing
 
 const featuredTools = [
   {
@@ -267,17 +267,17 @@ export default function Home() {
           </Link>
 
           <Link
-            to="/va-tools"
+            to="/productivity-tools"
             className="group relative block p-6 bg-white dark:bg-gray-800 border-l-4 border-primary-600 dark:border-primary-500 hover:border-primary-700 dark:hover:border-primary-400 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
           >
             <div className="absolute top-4 right-4">
-              {TOOL_COUNTS.va === 0 ? (
+              {TOOL_COUNTS.productivity === 0 ? (
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
                   Coming Soon
                 </span>
               ) : (
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300">
-                  {TOOL_COUNTS.va} tools
+                  {TOOL_COUNTS.productivity} tools
                 </span>
               )}
             </div>
@@ -285,7 +285,7 @@ export default function Home() {
               <Users className="h-6 w-6 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5" />
               <div>
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-1.5">
-                  VA Tools
+                  Productivity Tools
                 </h2>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                   Productivity and automation utilities.

@@ -6,6 +6,7 @@ import { downloadFile } from '../../utils/dev/fileHandler'
 import { generateRandomWords, getRandomQuote, type RandomWordOptions, type QuoteLength } from '../../utils/va/textSamples'
 import { saveTypingHistory, loadTypingHistory, clearTypingHistory, type TypingTestResult, type CharacterBreakdown } from '../../utils/va/storage'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import Textarea from '../../components/Textarea'
 
 type TestMode = 'time' | 'words'
 type TextSource = 'random' | 'quote' | 'custom'
@@ -707,7 +708,7 @@ export default function TypingTest() {
                       onChange={(e) => setWordCount(Number(e.target.value))}
                       min="5"
                       max="500"
-                      className="w-16 px-2 py-1 text-xs border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-16 px-2 py-1 text-xs"
                       placeholder="Custom"
                     />
                   </>
@@ -841,7 +842,8 @@ export default function TypingTest() {
             {textSource === 'custom' && (
               <div className="flex items-center gap-2 flex-1 min-w-0">
                 <span className="text-xs font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap">Custom:</span>
-                <textarea
+                <Textarea
+                  variant="primary"
                   value={customText}
                   onChange={(e) => {
                     setCustomText(e.target.value)
@@ -850,7 +852,7 @@ export default function TypingTest() {
                     }
                   }}
                   placeholder="Enter custom text..."
-                  className="flex-1 px-2 py-1 text-xs border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none min-h-[2rem] max-h-20"
+                  className="flex-1 px-2 py-1 text-xs resize-none min-h-[2rem] max-h-20"
                   rows={1}
                 />
               </div>

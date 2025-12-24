@@ -159,7 +159,7 @@ export default function JSONFormatter() {
       keywords="JSON formatter, JSON minifier, JSON prettifier, JSON beautifier"
     >
       <div className="space-y-6">
-        <div>
+        <div className="!m-1">
           <div className="flex items-center justify-between mb-2">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
               JSON Input
@@ -172,7 +172,7 @@ export default function JSONFormatter() {
               ) : null}
             </div>
           </div>
-          <div className="relative border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
+          <div className="relative border-2 border-gray-300 dark:border-gray-600 rounded-md overflow-hidden">
             {/* Line numbers */}
             <div
               ref={lineNumbersRef}
@@ -188,7 +188,7 @@ export default function JSONFormatter() {
               onChange={(e) => setJsonInput(e.target.value)}
               onScroll={handleScroll}
               placeholder='{"name":"John","age":30,"city":"New York"}'
-              className="w-full h-64 pl-14 pr-4 py-4 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500 resize-none"
+              className="w-full h-64 pl-14 pr-4 py-4 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500 resize-none"
               style={{ lineHeight: '1.5rem' }}
             />
             {/* Error line highlight */}
@@ -272,10 +272,10 @@ export default function JSONFormatter() {
               <textarea
                 value={formatted}
                 readOnly
-                className="w-full h-96 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
+                className="w-full h-96 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
               />
             ) : (
-              <div className="w-full h-96 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm overflow-auto">
+              <div className="w-full h-96 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm overflow-auto">
                 {parsedData ? renderTreeView(parsedData) : <span>Invalid JSON</span>}
               </div>
             )}

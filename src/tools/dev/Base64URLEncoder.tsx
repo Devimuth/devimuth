@@ -185,7 +185,7 @@ export default function Base64URLEncoder() {
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Encoding/Decoding</h2>
           <div className="flex items-center space-x-2">
             {encodingType === 'base64' && operation === 'encode' && (
-              <label className="flex items-center space-x-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-600">
+              <label className="flex items-center space-x-2 px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-600">
                 <Upload className="h-4 w-4" />
                 <span className="text-sm">Upload File</span>
                 <input
@@ -220,7 +220,7 @@ export default function Base64URLEncoder() {
                 setPreview({ type: 'none', content: '' })
                 setUploadedFile(null)
               }}
-              className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             >
               <option value="base64">Base64</option>
               <option value="url">URL</option>
@@ -276,7 +276,7 @@ export default function Base64URLEncoder() {
                     setBatchInputs(newInputs)
                   }}
                   placeholder={operation === 'encode' ? 'Enter text to encode...' : `Enter ${encodingType === 'base64' ? 'Base64' : 'URL'} encoded text...`}
-                  className="w-full h-24 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm"
+                  className="w-full h-24 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm"
                 />
                 {batchOutputs[index] && (
                   <div className="p-2 bg-gray-50 dark:bg-gray-900 rounded border border-gray-300 dark:border-gray-600">
@@ -306,7 +306,7 @@ export default function Base64URLEncoder() {
           </div>
         ) : (
           <>
-            <div>
+            <div className="!m-1">
               <div className="flex items-center justify-between mb-2">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                   {operation === 'encode' ? 'Input Text' : `${encodingType === 'base64' ? 'Base64' : 'URL'} Encoded Input`}
@@ -332,7 +332,7 @@ export default function Base64URLEncoder() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={operation === 'encode' ? 'Enter text to encode...' : `Enter ${encodingType === 'base64' ? 'Base64' : 'URL'} encoded text...`}
-                className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-primary-500"
+                className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm focus:ring-1 focus:ring-offset-0 focus:ring-primary-500"
               />
             </div>
 
@@ -358,7 +358,7 @@ export default function Base64URLEncoder() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Preview
                 </label>
-                <div className="border border-gray-300 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
+                <div className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-4 bg-gray-50 dark:bg-gray-900">
                   <img
                     src={preview.content}
                     alt="Decoded preview"
@@ -372,7 +372,7 @@ export default function Base64URLEncoder() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Preview
                 </label>
-                <div className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900">
+                <div className="p-4 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900">
                   <p className="text-sm font-mono text-gray-900 dark:text-white whitespace-pre-wrap">
                     {preview.content}
                   </p>
@@ -404,7 +404,7 @@ export default function Base64URLEncoder() {
               <textarea
                 value={output}
                 readOnly
-                className="w-full h-64 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
+                className="w-full h-64 px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"
               />
             </div>
           </div>

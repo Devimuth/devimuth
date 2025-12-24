@@ -110,7 +110,7 @@ export default function OpenGraphGenerator() {
           <div className="space-y-4">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Required Tags</h2>
             
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 og:title *
               </label>
@@ -119,11 +119,11 @@ export default function OpenGraphGenerator() {
                 value={ogData.title}
                 onChange={(e) => handleInputChange('title', e.target.value)}
                 placeholder="Page Title"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 og:description *
               </label>
@@ -132,11 +132,11 @@ export default function OpenGraphGenerator() {
                 onChange={(e) => handleInputChange('description', e.target.value)}
                 placeholder="Page description for social sharing"
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 og:image *
               </label>
@@ -145,14 +145,14 @@ export default function OpenGraphGenerator() {
                 value={ogData.image}
                 onChange={(e) => handleInputChange('image', e.target.value)}
                 placeholder="https://example.com/image.jpg"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
               <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 Recommended: 1200x630px (1.91:1 ratio)
               </p>
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 og:url *
               </label>
@@ -161,7 +161,7 @@ export default function OpenGraphGenerator() {
                 value={ogData.url}
                 onChange={(e) => handleInputChange('url', e.target.value)}
                 placeholder="https://example.com/page"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
             </div>
           </div>
@@ -169,14 +169,14 @@ export default function OpenGraphGenerator() {
           <div className="space-y-4">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Optional Tags</h2>
             
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 og:type
               </label>
               <select
                 value={ogData.type}
                 onChange={(e) => handleInputChange('type', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               >
                 <option value="website">Website</option>
                 <option value="article">Article</option>
@@ -188,7 +188,7 @@ export default function OpenGraphGenerator() {
               </select>
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 og:site_name
               </label>
@@ -197,11 +197,11 @@ export default function OpenGraphGenerator() {
                 value={ogData.siteName}
                 onChange={(e) => handleInputChange('siteName', e.target.value)}
                 placeholder="Your Site Name"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 og:locale
               </label>
@@ -210,7 +210,7 @@ export default function OpenGraphGenerator() {
                 value={ogData.locale}
                 onChange={(e) => handleInputChange('locale', e.target.value)}
                 placeholder="en_US"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
               <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 Format: language_COUNTRY (e.g., en_US, fr_FR)
@@ -223,7 +223,7 @@ export default function OpenGraphGenerator() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Image Preview
                 </label>
-                <div className="border border-gray-300 dark:border-gray-600 rounded-md p-2 bg-gray-50 dark:bg-gray-800">
+                <div className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 bg-gray-50 dark:bg-gray-800">
                   {!imageError ? (
                     <img
                       src={ogData.image}

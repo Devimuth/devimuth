@@ -151,7 +151,7 @@ export default function DistanceArea() {
               setDistance(null)
               setArea(null)
             }}
-            className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            className="px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
           >
             <option value="distance">Distance</option>
             <option value="area">Area</option>
@@ -163,7 +163,7 @@ export default function DistanceArea() {
             <select
               value={distanceUnit}
               onChange={(e) => setDistanceUnit(e.target.value as DistanceUnit)}
-              className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             >
               <option value="m">Meters</option>
               <option value="km">Kilometers</option>
@@ -178,7 +178,7 @@ export default function DistanceArea() {
             <select
               value={areaUnit}
               onChange={(e) => setAreaUnit(e.target.value as AreaUnit)}
-              className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             >
               <option value="m2">Square Meters</option>
               <option value="km2">Square Kilometers</option>

@@ -129,7 +129,7 @@ export default function DMSConverter() {
                     type="number"
                     value={latDegrees}
                     onChange={(e) => setLatDegrees(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -139,7 +139,7 @@ export default function DMSConverter() {
                     step="any"
                     value={latMinutes}
                     onChange={(e) => setLatMinutes(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -149,7 +149,7 @@ export default function DMSConverter() {
                     step="any"
                     value={latSeconds}
                     onChange={(e) => setLatSeconds(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -157,7 +157,7 @@ export default function DMSConverter() {
                   <select
                     value={latDirection}
                     onChange={(e) => setLatDirection(e.target.value as 'N' | 'S')}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   >
                     <option value="N">N</option>
                     <option value="S">S</option>
@@ -175,7 +175,7 @@ export default function DMSConverter() {
                     type="number"
                     value={lonDegrees}
                     onChange={(e) => setLonDegrees(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -185,7 +185,7 @@ export default function DMSConverter() {
                     step="any"
                     value={lonMinutes}
                     onChange={(e) => setLonMinutes(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -195,7 +195,7 @@ export default function DMSConverter() {
                     step="any"
                     value={lonSeconds}
                     onChange={(e) => setLonSeconds(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -203,7 +203,7 @@ export default function DMSConverter() {
                   <select
                     value={lonDirection}
                     onChange={(e) => setLonDirection(e.target.value as 'E' | 'W')}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   >
                     <option value="E">E</option>
                     <option value="W">W</option>
@@ -260,7 +260,7 @@ export default function DMSConverter() {
                 value={decimalLat}
                 onChange={(e) => setDecimalLat(e.target.value)}
                 placeholder="e.g., 52.5200"
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
             <div>
@@ -273,7 +273,7 @@ export default function DMSConverter() {
                 value={decimalLon}
                 onChange={(e) => setDecimalLon(e.target.value)}
                 placeholder="e.g., 13.4050"
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
             <button

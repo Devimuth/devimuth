@@ -3,7 +3,7 @@ import ToolPage from '../../components/ToolPage/ToolPage'
 import { Copy, Download, RefreshCw, CheckCircle, AlertCircle } from 'lucide-react'
 import { copyToClipboard } from '../../utils/copyToClipboard'
 import toast from 'react-hot-toast'
-import { generateDescriptionVariations, extractKeywords, calculateReadabilityScore, analyzeSentiment, type DescriptionOptions } from '../../utils/marketing/descriptionGenerator'
+import { generateDescriptionVariations, extractKeywords, calculateReadabilityScore, analyzeSentiment } from '../../utils/marketing/descriptionGenerator'
 import { validateDescriptionLength } from '../../utils/marketing/seoTemplates'
 
 export default function MetaDescriptionGenerator() {
@@ -135,7 +135,7 @@ export default function MetaDescriptionGenerator() {
       <div className="space-y-6">
         {/* Input Section */}
         <div className="space-y-4">
-          <div>
+          <div className="!m-1">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Content *
             </label>
@@ -144,7 +144,7 @@ export default function MetaDescriptionGenerator() {
               onChange={(e) => setContent(e.target.value)}
               placeholder="Paste your page content here to generate meta descriptions..."
               rows={8}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
             />
             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
               {content.length} characters
@@ -152,7 +152,7 @@ export default function MetaDescriptionGenerator() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Target Keywords (comma-separated)
               </label>
@@ -161,7 +161,7 @@ export default function MetaDescriptionGenerator() {
                 value={keywords}
                 onChange={(e) => setKeywords(e.target.value)}
                 placeholder="keyword1, keyword2, keyword3"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               />
               {autoExtractedKeywords.length > 0 && !keywords && (
                 <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -170,14 +170,14 @@ export default function MetaDescriptionGenerator() {
               )}
             </div>
 
-            <div>
+            <div className="!m-1">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Tone
               </label>
               <select
                 value={tone}
                 onChange={(e) => setTone(e.target.value as any)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-purple-500"
               >
                 <option value="professional">Professional</option>
                 <option value="friendly">Friendly</option>

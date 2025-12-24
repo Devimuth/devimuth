@@ -290,7 +290,7 @@ export default function SkillsAssessmentGenerator() {
     const answer = answers[question.id] || ''
 
     return (
-      <div key={question.id} className="mb-6">
+      <div key={question.id} className="mb-6 !m-1">
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {question.question}
           {question.required && <span className="text-red-500 ml-1">*</span>}
@@ -318,7 +318,7 @@ export default function SkillsAssessmentGenerator() {
           <textarea
             value={answer as string}
             onChange={(e) => setAnswers({ ...answers, [question.id]: e.target.value })}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             rows={4}
             placeholder="Enter your answer..."
           />
@@ -438,7 +438,7 @@ export default function SkillsAssessmentGenerator() {
                   type="text"
                   value={assessment.title}
                   onChange={(e) => setAssessment({ ...assessment, title: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="Enter assessment title"
                 />
               </div>
@@ -450,7 +450,7 @@ export default function SkillsAssessmentGenerator() {
                   type="text"
                   value={assessment.description}
                   onChange={(e) => setAssessment({ ...assessment, description: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="Enter description (optional)"
                 />
               </div>
@@ -461,7 +461,7 @@ export default function SkillsAssessmentGenerator() {
               <select
                 value={selectedTemplate}
                 onChange={(e) => setSelectedTemplate(e.target.value)}
-                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="flex-1 px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">Load question template...</option>
                 {templateNames.map((name) => (
@@ -571,7 +571,7 @@ export default function SkillsAssessmentGenerator() {
                         onChange={(e) =>
                           setEditingQuestion({ ...editingQuestion, question: e.target.value })
                         }
-                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                        className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         rows={3}
                       />
                     </div>
@@ -603,7 +603,7 @@ export default function SkillsAssessmentGenerator() {
                               options: e.target.value.split('\n').filter((o) => o.trim()),
                             })
                           }
-                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                          className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                           rows={4}
                           placeholder="Option 1&#10;Option 2&#10;Option 3"
                         />
@@ -623,7 +623,7 @@ export default function SkillsAssessmentGenerator() {
                               ratingScale: Number(e.target.value) as 5 | 10,
                             })
                           }
-                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                          className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         >
                           <option value={5}>1-5</option>
                           <option value={10}>1-10</option>
@@ -634,7 +634,7 @@ export default function SkillsAssessmentGenerator() {
                     <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-200 dark:border-gray-700">
                       <button
                         onClick={() => setEditingQuestion(null)}
-                        className="px-5 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
+                        className="px-5 py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
                       >
                         Cancel
                       </button>
@@ -666,7 +666,7 @@ export default function SkillsAssessmentGenerator() {
                 {/* Secondary Actions Menu */}
                 <div className="relative" ref={actionsMenuRef}>
                   <button
-                    className="flex items-center gap-2 px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
+                    className="flex items-center gap-2 px-4 py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
                     onClick={(e) => {
                       e.stopPropagation()
                       setShowActionsMenu(!showActionsMenu)
